@@ -1,15 +1,18 @@
 # Meterpreter-Reverse-TCP-Lab
 
 Machines and IP Address:
+
 Kali Linux Attacker Machine 192.168.20.11
 Windows 10 Victim Machine 192.168.20.10
 
 Lab Overview:
+
 This lab utilizes two virtual machines running on VirtualBox: a Kali Linux Debian machine and a Windows 10 virtual machine. The objective of this lab is to demonstrate the basic usage of select Kali Linux tools, including msfvenom and Metasploit. Additionally, participants will learn about configuring networking settings for both Windows 10 and Kali Linux.
 
 All corresponding screenshots for this lab are included in the attached file, referenced by numerical labels.
 
 Lab:
+
 To enable communication between the virtual machines, the network settings are configured to use an "Internal Network" with the custom name "mytest" within VirtualBox settings, as shown in Screenshot 1. This setup allows the virtual machines to have unique IP addresses while staying connected to the host's physical network. 
 
 On the Windows 10 machine, the network settings are modified to set a static IP address. To do this, open the Network Settings, click "Change adapter options," and then modify the Ethernet properties, as shown in Screenshot 2. Similarly, on the Kali Linux machine, the IPv4 settings in "Wired Connection 1" are adjusted to set a static IP address, as shown in Screenshot 3. After configuring the IP addresses and establishing the connection, the virtual machines can communicate with each other while maintaining unique IP addresses within the host's physical network
@@ -23,6 +26,7 @@ To verify if a connection has been established on the Windows 10 machine, open t
 On the Kali Linux machine, a connection with the handler should be established, indicating a successful exploit, as shown in Screenshot 10. Once the Meterpreter session is established, typing "shell" will grant the attacker control over the command prompt of the Windows 10 virtual machine, allowing them to execute commands remotely, as seen in Screenshot 11.
 
 Beyond the Lab: 
+
 This lab demonstrates a simple exploitation of an undefended Windows machine. However, in real-world scenarios, Windows Defender Firewall and other security measures would likely prevent such an attack. Moreover, experienced hackers typically develop custom exploits tailored to their target's specific vulnerabilities, allowing them to bypass existing security parameters. These tailored exploits often utilize sophisticated, spoofed tools rather than relying on prebuilt tools like those found in Kali Linux's Metasploit framework. This highlights the importance of staying vigilant and proactive in maintaining robust security measures to counter evolving threats.
 
 
